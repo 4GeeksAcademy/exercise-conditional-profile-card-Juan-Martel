@@ -31,19 +31,47 @@ function render(variables = {}) {
 
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
-            ${cover}
-          <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
-          <ul class="position-right">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/school/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
-          </ul>
-        </div>
-    `;
+                    ${cover}
+                  <img src="${variables.avatarURL}" class="photo" />
+                  <h1> ${variables.name ? variables.name : "None"} 
+                  ${
+                    variables.lastName ? variables.lastName : "No lastName"
+                  } </h1>
+                  <h2> ${variables.role ? variables.role : "No Role"}</h2>
+                  <h3>${variables.city ? variables.city : "No city for me"}, ${
+    variables.country ? variables.country : "No country for me"
+  } </h3>
+        
+        
+                  <ul class="${
+                    variables.socialMediaPosition
+                      ? variables.socialMediaPosition
+                      : "position-right"
+                  }">
+                    <li><a href=https://x.com/${
+                      variables.twitter ? variables.twitter : "no user"
+                    }
+                     "><i class="fab fa-twitter"></i></a></li>
+                    <li><a href=${
+                      variables.github
+                        ? (variables.github = "https://github.com/jjmartel")
+                        : "NoGithub"
+                    } "https://github.com/jjmartel"><i class="fab fa-github"></i></a></li>
+                    <li><a href= ${
+                      variables.linkedin
+                        ? (variables.linkedin =
+                            "https://www.linkedin.com/in/juanmartel/")
+                        : "NoLinkedin"
+                    } "https://www.linkedin.com/in/juanmartel/"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href= ${
+                      variables.instagram
+                        ? (variables.instagram =
+                            "https://www.instagram.com/_juanmartel/")
+                        : "NoInstagram"
+                    } "https://instagram.com/_juanMartel"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                </div>
+            `;
 }
 
 /**

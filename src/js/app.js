@@ -52,23 +52,18 @@ function render(variables = {}) {
                       variables.twitter ? variables.twitter : "no user"
                     }
                      "><i class="fab fa-twitter"></i></a></li>
-                    <li><a href=${
-                      variables.github
-                        ? (variables.github = "https://github.com/jjmartel")
-                        : "NoGithub"
-                    } "https://github.com/jjmartel"><i class="fab fa-github"></i></a></li>
-                    <li><a href= ${
-                      variables.linkedin
-                        ? (variables.linkedin =
-                            "https://www.linkedin.com/in/juanmartel/")
-                        : "NoLinkedin"
-                    } "https://www.linkedin.com/in/juanmartel/"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href= ${
-                      variables.instagram
-                        ? (variables.instagram =
-                            "https://www.instagram.com/_juanmartel/")
-                        : "NoInstagram"
-                    } "https://instagram.com/_juanMartel"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href=https://github.com/${
+                      variables.github ? variables.github : "NoGithub"
+                    }
+                    }<i class="fab fa-github"></i></a></li>
+                    <li><a href=https://www.linkedin.com/in/${
+                      variables.linkedin ? variables.linkedin : "NoLinkedin"
+                    } 
+                     <i class="fab fa-linkedin"></i></a></li>
+                    <li><a href=https://www.instagram.com/${
+                      variables.instagram ? variables.instagram : "NoInstagram"
+                    } 
+                    <i class="fab fa-instagram"></i></a></li>
                   </ul>
                 </div>
             `;
